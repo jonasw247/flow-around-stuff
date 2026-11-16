@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "flow-around-stuff"
+version = "0.1.0"
+description = "Predicts the steady flow around a body from its surface mesh"
+readme = "README.md"
+license = {text = "CC-BY-4.0"}
+requires-python = ">=3.9"
+dependencies = ["torch>=2.4", "numpy", "scipy", "safetensors", "trimesh", "networkx", "huggingface_hub"]
+
+[project.scripts]
+fas = "fas:main"
+
+[tool.setuptools]
+py-modules = ["fas"]
